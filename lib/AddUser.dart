@@ -29,16 +29,51 @@ class _AddUserScreenState extends State<AddUserScreen> {
       Container(
         color: Colors.white,
       ),
-      SizedBox(
-        height: 170,
-        child: Image.asset("images/Artboard 1 copy.png", fit: BoxFit.contain),
+      Center(
+        child: Column(
+          children: [
+            Expanded(
+                child: Image.asset(
+              "images/Artboard 1.png",
+              color: Colors.white.withOpacity(0.5),
+              colorBlendMode: BlendMode.modulate,
+            )),
+          ],
+        ),
       ),
       Scaffold(
+          appBar: PreferredSize(
+            preferredSize: const Size.fromHeight(85.0),
+            child: AppBar(
+              backgroundColor: const Color.fromRGBO(12, 2, 114, 1),
+              primary: false,
+              leading: const Padding(
+                padding: EdgeInsets.fromLTRB(12.0, 7, 0, 0),
+                child: Icon(
+                  Icons.remove_red_eye,
+                  size: 60,
+                  color: Colors.red,
+                ),
+              ),
+              flexibleSpace: const Padding(
+                padding: EdgeInsets.fromLTRB(80.0, 0, 0, 0),
+                child: Text(
+                  "Catch Danger",
+                  overflow: TextOverflow.fade,
+                  style: TextStyle(
+                      fontSize: 45,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600),
+                  maxLines: 2,
+                ),
+              ),
+            ),
+          ),
           backgroundColor: Colors.transparent,
           body: Form(
             key: _addKey,
             child: Container(
-              margin: EdgeInsets.all(20),
+              margin: EdgeInsets.fromLTRB(200, 20, 200, 20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -52,9 +87,9 @@ class _AddUserScreenState extends State<AddUserScreen> {
                     decoration: InputDecoration(
                         labelText: "First Name",
                         labelStyle: TextStyle(
-                            fontSize: 14,
+                            fontSize: 20,
                             fontWeight: FontWeight.w600,
-                            color: Color(0xFF797979)),
+                            color: Color.fromRGBO(12, 2, 114, 1)),
                         floatingLabelBehavior: FloatingLabelBehavior.auto),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -70,9 +105,9 @@ class _AddUserScreenState extends State<AddUserScreen> {
                     decoration: InputDecoration(
                         labelText: "Second Name",
                         labelStyle: TextStyle(
-                            fontSize: 14,
+                            fontSize: 20,
                             fontWeight: FontWeight.w600,
-                            color: Color(0xFF797979)),
+                            color: Color.fromRGBO(12, 2, 114, 1)),
                         floatingLabelBehavior: FloatingLabelBehavior.auto),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -88,9 +123,9 @@ class _AddUserScreenState extends State<AddUserScreen> {
                     decoration: InputDecoration(
                         labelText: "Email",
                         labelStyle: TextStyle(
-                            fontSize: 14,
+                            fontSize: 20,
                             fontWeight: FontWeight.w600,
-                            color: Color(0xFF797979)),
+                            color: Color.fromRGBO(12, 2, 114, 1)),
                         floatingLabelBehavior: FloatingLabelBehavior.auto),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -116,9 +151,9 @@ class _AddUserScreenState extends State<AddUserScreen> {
                         ),
                         labelText: "Password",
                         labelStyle: TextStyle(
-                            fontSize: 14,
+                            fontSize: 20,
                             fontWeight: FontWeight.w600,
-                            color: Color(0xFF797979)),
+                            color: Color.fromRGBO(12, 2, 114, 1)),
                         floatingLabelBehavior: FloatingLabelBehavior.auto),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -139,7 +174,7 @@ class _AddUserScreenState extends State<AddUserScreen> {
                       : Material(
                           elevation: 5,
                           borderRadius: BorderRadius.circular(10),
-                          color: Colors.white,
+                          color: Color.fromRGBO(12, 2, 114, 1),
                           child: MaterialButton(
                             padding: EdgeInsets.fromLTRB(20, 15, 20, 15),
                             onPressed: () {
@@ -149,7 +184,7 @@ class _AddUserScreenState extends State<AddUserScreen> {
                               "Add User",
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                  color: Colors.red,
+                                  color: Colors.white,
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold),
                             ),

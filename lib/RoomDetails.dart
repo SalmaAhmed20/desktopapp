@@ -1,3 +1,4 @@
+import 'package:desktopapp/AddUserToroom.dart';
 import 'package:firedart/firedart.dart';
 import 'package:firedart/firestore/firestore.dart';
 import 'package:flutter/material.dart';
@@ -148,7 +149,14 @@ class _RoomDetailsState extends State<RoomDetails> {
                                               BorderRadius.circular(18.0),
                                           side:
                                               BorderSide(color: Colors.blue)))),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push<void>(
+                                    context,
+                                    MaterialPageRoute<void>(
+                                      builder: (BuildContext context) =>
+                                          AddUserToRoom(widget.Room),
+                                    ));
+                              },
                               child: Text("Add User to Room",
                                   style: TextStyle(fontSize: 25)))
                         ],
