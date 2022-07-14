@@ -2,6 +2,7 @@ import 'package:firedart/firedart.dart';
 import 'package:flutter/material.dart';
 
 import 'AddRoom.dart';
+import 'AddUser.dart';
 import 'RoomDetails.dart';
 
 class FireStoreApp extends StatelessWidget {
@@ -180,10 +181,11 @@ class _FireStoreHomeState extends State<FireStoreHome> {
                         floatingActionButton: FloatingActionButton(
                           backgroundColor: Colors.red,
                           onPressed: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(builder: (context) => AddRoomScreen()),
-                            // );
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => AddUserScreen()),
+                            );
                           },
                           child: Icon(Icons.person_add),
                         ),
