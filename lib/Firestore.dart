@@ -168,7 +168,15 @@ class _FireStoreHomeState extends State<FireStoreHome> {
                                                       12, 2, 114, 1),
                                                   fontSize: 30),
                                             ),
-                                            onTap: () {},
+                                            onTap: () {
+                                              Navigator.push<void>(
+                                                  context,
+                                                  MaterialPageRoute<void>(
+                                                    builder: (BuildContext
+                                                            context) =>
+                                                        RoomDetails(Room),
+                                                  ));
+                                            },
                                           ),
                                         ),
                                       );
